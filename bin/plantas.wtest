@@ -1,0 +1,17 @@
+import plantas.*
+
+describe "plantas" {
+	const menta1= new Menta(altura=1)
+	const menta2= new Menta(altura=0.3)
+	const soja1=new Soja()
+	
+	
+   test "menta1"{
+	assert.that(menta1.daNuevasSemillas())
+	assert.equals(3, menta1.espacioQueOcupa())
+   }
+   test "menta2"{
+	assert.notThat(menta2.daNuevasSemillas())
+	assert.equals(0.9, menta2.espacioQueOcupa())
+   }
+}
